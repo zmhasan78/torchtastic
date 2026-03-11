@@ -1,0 +1,22 @@
+<!-- Torch Icon - used for spark quotes and section accents -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="icon-torch">
+  <defs>
+    <linearGradient id="flame-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF2D20"/>
+      <stop offset="40%" style="stop-color:#FF5A1F"/>
+      <stop offset="70%" style="stop-color:#FF7A18"/>
+      <stop offset="100%" style="stop-color:#FFC857"/>
+    </linearGradient>
+    <linearGradient id="handle-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513"/>
+      <stop offset="100%" style="stop-color:#5C2D0A"/>
+    </linearGradient>
+  </defs>
+  <!-- Handle -->
+  <rect x="28" y="36" width="8" height="24" rx="3" fill="url(#handle-grad)"/>
+  <rect x="26" y="34" width="12" height="6" rx="2" fill="#A0522D"/>
+  <!-- Flame -->
+  <path d="M32 4 C32 4, 44 18, 44 26 C44 32, 38 36, 32 36 C26 36, 20 32, 20 26 C20 18, 32 4, 32 4Z" fill="url(#flame-grad)" opacity=".9"/>
+  <path d="M32 12 C32 12, 38 20, 38 25 C38 29, 35 32, 32 32 C29 32, 26 29, 26 25 C26 20, 32 12, 32 12Z" fill="#FFC857" opacity=".7"/>
+  <ellipse cx="32" cy="26" rx="4" ry="6" fill="#FFF8DC" opacity=".5"/>
+</svg>

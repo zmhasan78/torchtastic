@@ -1,0 +1,14 @@
+{
+  "title": "Just Close It!",
+  "tagline": "Ask and You Shall Receive… Finally! The BREAK You're Looking For.",
+  "description": "George's flagship book on mastering the art of the close. Packed with real-world strategies for the confidence to ask for the sale — and get it.",
+  "cover": "/images/justcloseitbook.jpeg",
+  "amazon_url": "https://www.amazon.com/Just-Close-Ask-Shall-Receive/dp/0989161803/",
+  "other_books": [
+    { "title": "Close More Sales Now!" },
+    { "title": "Target Your Sales" },
+    { "title": "How To Double Your Sales" },
+    { "title": "Job To Career" },
+    { "title": "Worlds Greatest Closer" }
+  ]
+}

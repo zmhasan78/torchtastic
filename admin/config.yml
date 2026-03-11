@@ -1,0 +1,157 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images go
+media_folder: "images"
+public_folder: "/images"
+
+# Netlify Identity for login
+site_url: https://torchtastic.com
+logo_url: /images/torchtastic-logo.png
+
+# Content collections
+collections:
+
+  # ===== SITE SETTINGS (single file) =====
+  - name: "settings"
+    label: "Site Settings"
+    files:
+
+      # --- Hero Section ---
+      - name: "hero"
+        label: "Hero Section"
+        file: "_data/hero.json"
+        fields:
+          - { label: "Badge Text", name: "badge", widget: "string", default: "WORLD-CLASS MOTIVATIONAL SPEAKER & SALES TRAINER" }
+          - { label: "Headline Line 1", name: "line1", widget: "string", default: "IGNITE THE" }
+          - { label: "Headline Line 2 (Large)", name: "line2", widget: "string", default: "POTENTIAL" }
+          - { label: "Headline Line 3", name: "line3", widget: "string", default: "WITHIN." }
+          - { label: "Subtitle", name: "subtitle", widget: "text", default: "George Dans — The Human Torch. Helping leaders, teams, and organizations unlock unstoppable performance." }
+          - { label: "Hero Logo Image", name: "logo_image", widget: "image", default: "/images/torchtastic-logo.png" }
+          - { label: "CTA Button 1 Text", name: "cta1_text", widget: "string", default: "Book George to Speak" }
+          - { label: "CTA Button 1 Link", name: "cta1_link", widget: "string", default: "#book-george" }
+          - { label: "CTA Button 2 Text", name: "cta2_text", widget: "string", default: "Watch the Fire" }
+          - { label: "CTA Button 2 Link", name: "cta2_link", widget: "string", default: "#media" }
+
+      # --- About Section ---
+      - name: "about"
+        label: "About George"
+        file: "_data/about.json"
+        fields:
+          - { label: "Section Tag", name: "tag", widget: "string", default: "THE ORIGIN STORY" }
+          - { label: "Title Line 1", name: "title1", widget: "string", default: "From Firefighter to" }
+          - { label: "Title Highlight", name: "title_highlight", widget: "string", default: "Firestarter" }
+          - { label: "Title Line 2", name: "title2", widget: "string", default: "of Human Potential" }
+          - { label: "Lead Paragraph", name: "lead", widget: "text" }
+          - { label: "Bio Paragraphs", name: "bio", widget: "markdown" }
+          - { label: "Main Photo", name: "photo_main", widget: "image" }
+          - { label: "Secondary Photo", name: "photo_secondary", widget: "image" }
+          - { label: "Stat 1 Number", name: "stat1_number", widget: "string", default: "6" }
+          - { label: "Stat 1 Label", name: "stat1_label", widget: "string", default: "Books Published" }
+          - { label: "Stat 2 Number", name: "stat2_number", widget: "string", default: "30K+" }
+          - { label: "Stat 2 Label", name: "stat2_label", widget: "string", default: "Lives Impacted" }
+          - { label: "Stat 3 Number", name: "stat3_number", widget: "string", default: "4" }
+          - { label: "Stat 3 Label", name: "stat3_label", widget: "string", default: "Countries" }
+
+      # --- Quotes ---
+      - name: "quotes"
+        label: "Spark Quotes"
+        file: "_data/quotes.json"
+        fields:
+          - { label: "Quote 1 Text", name: "quote1", widget: "string", default: "You don't need to know how to get to your goal. You just need to know you will reach your goal." }
+          - { label: "Quote 1 Attribution", name: "quote1_cite", widget: "string", default: "George Dans" }
+          - { label: "Quote 2 Text", name: "quote2", widget: "string", default: "How to bring out the potential in each person." }
+          - { label: "Quote 2 Attribution", name: "quote2_cite", widget: "string", default: "The Torchtastic Mission" }
+
+      # --- Social Links ---
+      - name: "social"
+        label: "Social Media Links"
+        file: "_data/social.json"
+        fields:
+          - { label: "Instagram URL", name: "instagram", widget: "string", default: "https://www.instagram.com/georgedans1" }
+          - { label: "TikTok URL", name: "tiktok", widget: "string", default: "https://tiktok.com/" }
+          - { label: "YouTube URL", name: "youtube", widget: "string", default: "http://www.youtube.com/@Torchtastic26" }
+          - { label: "Facebook URL", name: "facebook", widget: "string", default: "https://facebook.com/" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string", default: "https://www.linkedin.com/in/georgedans/" }
+
+      # --- Book Section ---
+      - name: "book"
+        label: "Featured Book"
+        file: "_data/book.json"
+        fields:
+          - { label: "Book Title", name: "title", widget: "string", default: "Just Close It!" }
+          - { label: "Tagline", name: "tagline", widget: "string", default: "Ask and You Shall Receive… Finally! The BREAK You're Looking For." }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Book Cover Image", name: "cover", widget: "image", default: "/images/justcloseitbook.jpeg" }
+          - { label: "Amazon Link", name: "amazon_url", widget: "string", default: "https://www.amazon.com/Just-Close-Ask-Shall-Receive/dp/0989161803/" }
+          - label: "Other Books"
+            name: "other_books"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+
+      # --- Contact / Booking ---
+      - name: "booking"
+        label: "Booking Section"
+        file: "_data/booking.json"
+        fields:
+          - { label: "Section Title", name: "title", widget: "string", default: "Bring The Human Torch To Your Event" }
+          - { label: "Description", name: "description", widget: "text", default: "Ready to ignite your team? Fill out the form and George's team will get back to you within 24 hours." }
+          - label: "Speaking Topics"
+            name: "topics"
+            widget: "list"
+            fields:
+              - { label: "Topic", name: "topic", widget: "string" }
+
+  # ===== PROGRAMS (repeatable) =====
+  - name: "programs"
+    label: "Programs & Keynotes"
+    folder: "_data/programs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Program Name", name: "title", widget: "string" }
+      - { label: "Audience", name: "audience", widget: "string", hint: "e.g. Sales teams & management" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Display Order", name: "order", widget: "number", default: 1 }
+      - label: "Key Outcomes"
+        name: "outcomes"
+        widget: "list"
+        fields:
+          - { label: "Outcome", name: "outcome", widget: "string" }
+
+  # ===== MEDIA GALLERY =====
+  - name: "gallery"
+    label: "Media Gallery"
+    folder: "_data/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Caption", name: "title", widget: "string" }
+      - { label: "Photo", name: "image", widget: "image" }
+      - { label: "Display Order", name: "order", widget: "number", default: 1 }
+      - { label: "Featured (large size)", name: "featured", widget: "boolean", default: false }
+
+  # ===== TESTIMONIALS =====
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "_data/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Person Name", name: "title", widget: "string" }
+      - { label: "Job Title / Company", name: "role", widget: "string" }
+      - { label: "Quote", name: "quote", widget: "text" }
+      - { label: "Display Order", name: "order", widget: "number", default: 1 }
+
+  # ===== INDUSTRIES =====
+  - name: "industries"
+    label: "Industries & Events"
+    file: "_data/industries.json"
+    fields:
+      - label: "Industry Tags"
+        name: "tags"
+        widget: "list"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
