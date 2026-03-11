@@ -2,6 +2,7 @@ backend:
   name: github
   repo: zmhasan78/torchtastic
   branch: main
+    base_url: https://auth.decapcms.app
 
 
 # Where uploaded images go
