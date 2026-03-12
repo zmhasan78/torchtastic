@@ -30,7 +30,7 @@
 .hero-embers{position:absolute;inset:0;z-index:1;pointer-events:none;}
 .particle{position:absolute;border-radius:50%;opacity:0;}
 
-.hero-split{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1200px;margin:0 auto;padding:120px 40px 80px;gap:40px;min-height:100vh;}
+.hero-split{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1200px;margin:0 auto;padding:155px 40px 80px;gap:40px;min-height:100vh;}
 
 /* LEFT TEXT */
 .hero-text{flex:1;max-width:560px;animation:fade-in-up .6s .2s both;}
@@ -225,12 +225,12 @@ cite{font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:3px;color:v
                       }
                       @media(max-width:768px){
                         .hero-split{flex-direction:column;padding:130px 24px 60px;text-align:center;}
-                          .nav-container{height:80px;}.nav-logo-img{width:308px;}.hero-character{width:min(300px,85vw);order:-1;margin-bottom:8px;}
+                          .nav-container{height:80px;overflow:visible;}.nav-logo-img{width:308px;}.hero-character{width:min(300px,85vw);order:-1;margin-bottom:8px;}
                             .hero-social{justify-content:center;}
                               .hero-ctas{justify-content:center;}
                                 .hero-badge{font-size:.6rem;}
-                                  .nav-links{display:none;flex-direction:column;position:absolute;top:120px;left:0;right:0;background:rgba(10,10,10,.98);padding:24px;gap:0;}
-                                    .nav-links.open{display:flex;}
+                                  .nav-links{display:none;flex-direction:column;position:absolute;top:80px;left:0;right:0;background:rgba(10,10,10,.98);padding:24px;gap:0;}
+                                    .nav-links.active{display:flex;}
                                       .nav-links li{border-bottom:1px solid rgba(255,255,255,.06);}
                                         .nav-links a{padding:16px 0;font-size:.9rem;}
                                           .nav-toggle{display:flex;}
