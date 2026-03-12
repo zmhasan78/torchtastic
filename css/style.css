@@ -1,5 +1,5 @@
 :root{--fire:#FF5A1F;--flame:#FF2D20;--gold:#FFC857;--ember:#FF7A18;--black:#111;--charcoal:#1a1a1a;--dark:#0a0a0a;--white:#f5f5f5;--gray:#999;}
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;scroll-padding-top:80px;}body{font-family:'Open Sans',sans-serif;background:var(--dark);color:var(--white);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}img{max-width:100%;height:auto;display:block;}a{text-decoration:none;color:inherit;}ul{list-style:none;}.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;scroll-padding-top:120px;}body{font-family:'Open Sans',sans-serif;background:var(--dark);color:var(--white);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}img{max-width:100%;height:auto;display:block;}a{text-decoration:none;color:inherit;}ul{list-style:none;}.container{max-width:1200px;margin:0 auto;padding:0 24px;}
 
 /* BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 36px;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;transition:all .3s;}
@@ -224,12 +224,12 @@ cite{font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:3px;color:v
                       .footer-grid{grid-template-columns:1fr 1fr;}
                       }
                       @media(max-width:768px){
-                        .hero-split{flex-direction:column;padding:100px 24px 60px;text-align:center;}
-                          .hero-character{width:min(340px,90vw);order:-1;margin-bottom:8px;}
+                        .hero-split{flex-direction:column;padding:130px 24px 60px;text-align:center;}
+                          .nav-container{height:80px;}.nav-logo-img{width:308px;}.hero-character{width:min(300px,85vw);order:-1;margin-bottom:8px;}
                             .hero-social{justify-content:center;}
                               .hero-ctas{justify-content:center;}
                                 .hero-badge{font-size:.6rem;}
-                                  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:rgba(10,10,10,.98);padding:24px;gap:0;}
+                                  .nav-links{display:none;flex-direction:column;position:absolute;top:120px;left:0;right:0;background:rgba(10,10,10,.98);padding:24px;gap:0;}
                                     .nav-links.open{display:flex;}
                                       .nav-links li{border-bottom:1px solid rgba(255,255,255,.06);}
                                         .nav-links a{padding:16px 0;font-size:.9rem;}
@@ -255,7 +255,7 @@ cite{font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:3px;color:v
                                                                                 .form-row{grid-template-columns:1fr;}
                                                                                 }
                                                                                 @media(max-width:480px){
-                                                                                  .hero-split{padding:90px 16px 50px;gap:12px;}
+                                                                                  .hero-split{padding:130px 16px 50px;gap:12px;}
                                                                                     .hero-logo-img{width:clamp(120px,28vw,170px);}
                                                                                       .hero-line1{font-size:1.4rem;}
                                                                                         .hero-line2{font-size:2.2rem;}
@@ -272,7 +272,7 @@ cite{font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:3px;color:v
 
                                                                                                           /* Small phones */
                                                                                                           @media(max-width:480px){
-                                                                                                            .hero-split{padding:90px 16px 50px;gap:12px;}
+                                                                                                            .hero-split{padding:130px 16px 50px;gap:12px;}
                                                                                                               .hero-logo-img{width:clamp(120px,28vw,170px);}
                                                                                                                 .hero-line1{font-size:1.4rem;}
                                                                                                                   .hero-line2{font-size:2.2rem;}
